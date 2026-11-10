@@ -1,0 +1,23 @@
+.Shaheer{
+
+ width: 700px;
+background-color: black;
+
+}
+
+th{ width: 100px;
+text-align: center;
+    background-color: grey;
+}
+
+td{
+text-align: center;
+
+background-color: lightgray;
+}
+h1{
+    text-align: center
+}
+h3{
+    text-align: center;
+}
