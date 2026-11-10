@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Application & Pet Care Guide – Petofy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Petofy <span>🐾</span></a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets.html">Available Pets</a></li>
+                <li><a href="apply.html" class="active">Apply & Care Guide</a></li>
+                <li><a href="stories.html">Rescue Stories & FAQ</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Bar & Back Button -->
+    <div class="breadcrumb-bar">
+        <div class="breadcrumb-container">
+            <button class="back-btn" id="backBtn">← Back to Previous Page</button>
+            <span class="breadcrumb-path">Home &gt; <strong id="currentBreadcrumb">Adoption Application</strong></span>
+        </div>
+    </div>
+
+    <!-- Page Header Banner -->
+    <header class="pets-banner">
+        <h1>Adoption Application & Pet Care Guide</h1>
+        <p>Complete your official adoption form and learn essential care tips for your new friend.</p>
+    </header>
+
+    <main class="page-container">
+        <!-- Application Form Section -->
+        <section class="form-section">
+            <div class="form-card">
+                <h2>🐾 Official Adoption Application Form</h2>
+                <p class="form-intro">Please fill out this form to begin the adoption matching process.</p>
+                
+                <div id="appSuccessAlert" class="alert-success hidden">
+                    <h3>🎉 Application Received Successfully!</h3>
+                    <p id="appSuccessText">Your application has been logged into our system.</p>
+                    <p class="ref-tag">Confirmation ID: <strong id="appRefCode">#PET-2026-0000</strong></p>
+                </div>
+
+                <form id="adoptionForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="applicantName">Full Name *</label>
+                            <input type="text" id="applicantName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="applicantEmail">Email Address *</label>
+                            <input type="email" id="applicantEmail" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="applicantPhone">Phone Number *</label>
+                            <input type="tel" id="applicantPhone" placeholder="(555) 000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="targetPet">Target Pet Selection *</label>
+                            <select id="targetPet" required>
+                                <option value="">Select a pet...</option>
+                                <option value="Coco">Coco – Persian Cat (20 Days)</option>
+                                <option value="Rex">Rex – Golden Retriever (2 Years)</option>
+                                <option value="Icy">Icy – Donkey (1 Year)</option>
+                                <option value="Frost">Frost – Horse (1.5 Years)</option>
+                                <option value="Bella">Bella – Bunny (6 Months)</option>
+                                <option value="Milo">Milo – Siamese Cat (1 Year)</option>
+                                <option value="Luna">Luna – French Bulldog (8 Months)</option>
+                                <option value="Barnaby">Barnaby – Pygmy Goat (2 Years)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="homeType">Living Environment *</label>
+                        <select id="homeType" required>
+                            <option value="House with Fenced Yard">House with Fenced Yard</option>
+                            <option value="Apartment / Condo">Apartment / Condo</option>
+                            <option value="Farm / Acreage">Farm / Acreage</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Prior Pet Experience</label>
+                        <textarea id="experience" rows="3" placeholder="Tell us briefly about any past experience with pets..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent btn-block">Submit Official Application 🐾</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Pet Care Handbook Accordion Section -->
+        <section class="handbook-section">
+            <div class="section-header">
+                <h2>📖 Essential Pet Care Handbook</h2>
+                <p>Click on any pet category to expand guidelines and helpful advice.</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>🐶 Dog & Puppy Care Basics</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p><strong>Nutrition:</strong> Feed high-quality protein meals twice daily according to age and body weight.</p>
+                        <p><strong>Exercise:</strong> Ensure at least 45 minutes of active walk or play daily.</p>
+                        <p><strong>Veterinary:</strong> Schedule annual vaccinations, flea/tick preventatives, and dental checks.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>🐱 Cat & Kitten Care Basics</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p><strong>Litter Box:</strong> Keep clean daily and place in a low-traffic area.</p>
+                        <p><strong>Scratching Posts:</strong> Provide sisal or cardboard scratchers to protect furniture.</p>
+                        <p><strong>Hydration:</strong> Cats love running water; consider a stainless steel water fountain.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>🐴 Horse & Farm Animal Care</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p><strong>Shelter:</strong> Require sturdy three-sided run-in sheds or dry barn stalls.</p>
+                        <p><strong>Diet:</strong> Unlimited clean forage/hay alongside fresh non-freezing water supplies.</p>
+                        <p><strong>Hoof Care:</strong> Trim hooves every 6 to 8 weeks with a certified farrier.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>🐰 Bunny & Small Pet Care</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p><strong>Hay Supply:</strong> Timothy hay should comprise 80% of their daily diet.</p>
+                        <p><strong>Chew Toys:</strong> Provide applewood sticks or cardboard tunnels to keep teeth worn down naturally.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Petofy 🐾 – Your New Best Friend</p>
+            <p class="copyright">&copy; 2026 Petofy Adoption Center. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
