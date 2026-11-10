@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Pets – Petofy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Petofy <span>🐾</span></a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets.html" class="active">Available Pets</a></li>
+                <li><a href="apply.html">Apply & Care Guide</a></li>
+                <li><a href="stories.html">Rescue Stories & FAQ</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Bar & Back Button -->
+    <div class="breadcrumb-bar">
+        <div class="breadcrumb-container">
+            <button class="back-btn" id="backBtn">← Back to Previous Page</button>
+            <span class="breadcrumb-path">Home &gt; <strong id="currentBreadcrumb">Available Pets</strong></span>
+        </div>
+    </div>
+
+    <!-- Page Header Banner -->
+    <header class="pets-banner">
+        <h1>Meet Our Available Pets</h1>
+        <p>Find your perfect buddy! Search by name or filter by animal category.</p>
+    </header>
+
+    <!-- Filter & Search Controls -->
+    <section class="controls-section">
+        <div class="controls-container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search by pet name, animal type, or breed...">
+            </div>
+
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-category="all">All Pets</button>
+                <button class="filter-btn" data-category="cat">Cats</button>
+                <button class="filter-btn" data-category="dog">Dogs</button>
+                <button class="filter-btn" data-category="horse">Horses</button>
+                <button class="filter-btn" data-category="other">Other Animals</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Gallery Grid -->
+    <main class="gallery-section">
+        <div class="pet-grid" id="petGrid">
+            <!-- Dynamic Pet Cards rendered by script.js -->
+        </div>
+
+        <div id="noResults" class="no-results hidden">
+            <p>🐾 No friendly companions found matching your search. Try another query!</p>
+        </div>
+    </main>
+
+    <!-- Pet Details Modal -->
+    <div class="modal-overlay hidden" id="petModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closePetModalBtn">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImg" src="" alt="Pet Image">
+                </div>
+                <div class="modal-details">
+                    <span class="badge" id="modalTypeBadge">Cat</span>
+                    <h2 id="modalName">Pet Name</h2>
+                    
+                    <div class="detail-row">
+                        <span><strong>Age:</strong> <span id="modalAge">2 Years</span></span>
+                        <span><strong>Breed:</strong> <span id="modalBreed">Persian</span></span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span><strong>Adoption Fee:</strong> <span id="modalFee" class="fee-text">$50</span></span>
+                    </div>
+
+                    <p id="modalDesc" class="modal-desc">Description of the pet goes here.</p>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-accent btn-block" id="adoptPetBtn">Quick Adopt 🐾</button>
+                        <button class="btn btn-primary btn-block" id="applyPetBtn">Complete Full Application Form</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adoption Success Modal -->
+    <div class="modal-overlay hidden" id="adoptionModal">
+        <div class="modal-content success-modal">
+            <button class="modal-close" id="closeSuccessModalBtn">&times;</button>
+            <div class="success-icon">🎉 🐾</div>
+            <h2 class="success-title">YAYY! YOUR NEW FRIEND! 🐾</h2>
+            <p class="success-subtitle" id="successMessage">
+                Congratulations! Your new best friend is waiting for you!
+            </p>
+            <div class="reference-box" id="modalRefBox">
+                Reference Code: <strong id="modalRefCode">#PET-2026-9812</strong>
+            </div>
+            <button class="btn btn-primary" id="returnToGalleryBtn">Return to Available Pets</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Petofy 🐾 – Your New Best Friend</p>
+            <p class="copyright">&copy; 2026 Petofy Adoption Center. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

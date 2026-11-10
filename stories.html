@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue Stories & FAQ – Petofy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Petofy <span>🐾</span></a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets.html">Available Pets</a></li>
+                <li><a href="apply.html">Apply & Care Guide</a></li>
+                <li><a href="stories.html" class="active">Rescue Stories & FAQ</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Bar & Back Button -->
+    <div class="breadcrumb-bar">
+        <div class="breadcrumb-container">
+            <button class="back-btn" id="backBtn">← Back to Previous Page</button>
+            <span class="breadcrumb-path">Home &gt; <strong id="currentBreadcrumb">Rescue Stories & FAQ</strong></span>
+        </div>
+    </div>
+
+    <!-- Page Header Banner -->
+    <header class="pets-banner">
+        <h1>Rescue Stories & Community Hub</h1>
+        <p>Read inspiring adoption tales, search common questions, and reach out to our team.</p>
+    </header>
+
+    <main class="page-container">
+        <!-- Success Stories Grid -->
+        <section class="stories-section">
+            <div class="section-header">
+                <h2>❤️ Heartwarming Adoption Tales</h2>
+                <p>Real stories of pets who found their forever homes through Petofy.</p>
+            </div>
+
+            <div class="stories-grid">
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Adopted Dog Barnaby">
+                    <div class="story-content">
+                        <h3>"Max Found His Forever Family!"</h3>
+                        <p class="story-meta">Adopted by The Miller Family • 3 months ago</p>
+                        <p>"Adopting Max through Petofy was the best decision we ever made. He brings endless joy, walks, and cuddles into our home daily!"</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Adopted Cat Cleo">
+                    <div class="story-content">
+                        <h3>"Cleo Purrs Every Single Night"</h3>
+                        <p class="story-meta">Adopted by Sarah T. • 6 months ago</p>
+                        <p>"Cleo was shy at first, but with the care tips from Petofy, she blossomed into a cozy lap cat. She never leaves my side."</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=600&q=80" alt="Adopted Donkey Barnaby">
+                    <div class="story-content">
+                        <h3>"Oatmeal settled into our Sanctuary"</h3>
+                        <p class="story-meta">Adopted by Meadowbrook Farm • 1 year ago</p>
+                        <p>"Oatmeal the donkey has become the gentle guardian of our pastures. The adoption process was smooth and supportive."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Searchable FAQ Section -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2>❓ Frequently Asked Questions</h2>
+                <p>Search or browse questions regarding our adoption requirements and process.</p>
+            </div>
+
+            <div class="search-box faq-search">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="faqSearchInput" placeholder="Search questions (e.g. fee, vaccination, home visit)...">
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">
+                        <span>What is included in the pet adoption fee?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>All adoption fees cover spay/neuter surgery, complete age-appropriate vaccinations, microchipping, and a preliminary health check by a licensed veterinarian.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">
+                        <span>How long does the adoption application process take?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Most applications are reviewed within 24 to 48 hours. Our team will reach out by email or phone to confirm details and schedule a meetup.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">
+                        <span>Can I meet the pet before completing adoption?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! Once your application is conditionally approved, we arrange a meet-and-greet at our center or via video call depending on your location.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">
+                        <span>What if the pet does not settle well into my home?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>We provide full post-adoption support including training consultations. If it isn't a good fit, we take the animal back into our shelter safety net.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shelter Contact & Location Section -->
+        <section class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>📍 Visit Petofy Shelter</h2>
+                    <p><strong>Address:</strong> 124 Pawprint Avenue, Friendship Haven, CA 90210</p>
+                    <p><strong>Hours:</strong> Mon - Sat: 9:00 AM – 6:00 PM | Sun: 10:00 AM – 4:00 PM</p>
+                    <p><strong>Email:</strong> adopt@petofy.org</p>
+                    <p><strong>Phone:</strong> (555) 838-6399</p>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>✉️ Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="3" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Petofy 🐾 – Your New Best Friend</p>
+            <p class="copyright">&copy; 2026 Petofy Adoption Center. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
